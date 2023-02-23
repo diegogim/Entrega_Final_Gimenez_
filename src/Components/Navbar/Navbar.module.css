@@ -1,0 +1,22 @@
+.bgDark{
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.logo{
+    width: auto;
+    height: 10vh;
+    padding: 1vh;
+}
+
+.lista{
+    display: flex;
+    gap: 20px;
+}
+
+.links{
+    color: white;
+    text-decoration: none;
+}
