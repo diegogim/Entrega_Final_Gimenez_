@@ -1,14 +1,27 @@
+import Item from "../Item/Item";
+import styles from "./ItemListContainer.module.css";
+import { products } from "../../mockProducts";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
-import styles from "./ItemListContainer.module.css"
+const ItemListContainer = () => {
+  const { categoria } = useParams();
 
-const ItemListContainer = ({greeting}) => {
+  const [prodList, setProdList] = useState([]);
+
+  const prodFiltered = products.filter((x) => x.categoria === categoria);
+
+  useEffect(() => {
+    categoria ? setProdList(prodFiltered) : setProdList(products);
+  }, [categoria]);
+
+  console.log(prodList);
+
   return (
     <div className={styles.greet}>
-        <h1>
-            {greeting}
-        </h1>
+      <Item prodList={prodList} />
     </div>
-  )
-}
+  );
+};
 
-export default ItemListContainer
+export default ItemListContainer;
