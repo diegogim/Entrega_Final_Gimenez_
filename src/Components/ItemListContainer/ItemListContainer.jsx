@@ -1,21 +1,33 @@
 import Item from "../Item/Item";
 import styles from "./ItemListContainer.module.css";
-import { products } from "../../mockProducts";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { db } from "../../firebaseConfig";
+import { collection, getDocs } from "firebase/firestore";
 
 const ItemListContainer = () => {
   const { categoria } = useParams();
 
   const [prodList, setProdList] = useState([]);
 
-  const prodFiltered = products.filter((x) => x.categoria === categoria);
+  useEffect(() => {
+    const itemsCollection = collection(db, "productos");
+    getDocs(itemsCollection).then((res) => {
+      let productos = res.docs.map((e) => {
+        return {
+          ...e.data(),
+          id: e.id,
+        };
+      });
+      setProdList(productos);
+    });
+  }, []);
+
+  const prodFiltered = prodList.filter((x) => x.categoria === categoria);
 
   useEffect(() => {
-    categoria ? setProdList(prodFiltered) : setProdList(products);
+    categoria ? setProdList(prodFiltered) : setProdList(prodList);
   }, [categoria, prodFiltered]);
-
-  console.log(prodList);
 
   return (
     <div className={styles.greet}>
