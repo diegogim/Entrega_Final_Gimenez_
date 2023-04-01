@@ -13,7 +13,7 @@ const ItemListContainer = () => {
 
   useEffect(() => {
     categoria ? setProdList(prodFiltered) : setProdList(products);
-  }, [categoria]);
+  }, [categoria, prodFiltered]);
 
   console.log(prodList);
 

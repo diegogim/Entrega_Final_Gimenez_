@@ -1,4 +1,3 @@
-import { useParams } from "react-router-dom";
 import ItemQuantitySelector from "../ItemQuantitySelector/ItemQuantitySelector";
 
 const ItemDetail = ({ prodSel, onAdd, qty }) => {
