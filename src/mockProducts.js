@@ -6,6 +6,7 @@ export const products = [
     nombre: "A&W Cream Soda",
     descripcion: "Lata - 355 ml",
     precio: 80,
+    stock: 5,
     imagen: "https://res.cloudinary.com/dzzfmny6q/image/upload/v1678568351/cream_soda_l6coup.webp",
   },
   {
@@ -15,6 +16,7 @@ export const products = [
     nombre: "A&W Root Beer",
     descripcion: "Lata - 355 ml",
     precio: 80,
+    stock: 5,
     imagen: "https://res.cloudinary.com/dzzfmny6q/image/upload/v1678568351/root_bear_eopbcf.webp",
   },
   {
@@ -24,6 +26,7 @@ export const products = [
     nombre: "Coca Cola Original",
     descripcion: "Lata - 355 ml",
     precio: 40,
+    stock: 5,
     imagen: "https://res.cloudinary.com/dzzfmny6q/image/upload/v1678568351/coca_cola_jc3njo.webp",
   },
   {
@@ -33,6 +36,7 @@ export const products = [
     nombre: "Snapple Limón Light",
     descripcion: "Botella - 473 ml",
     precio: 40,
+    stock: 5,
     imagen: "https://res.cloudinary.com/dzzfmny6q/image/upload/v1678568351/snapple_limon_light_tzypax.webp",
   },
   {
@@ -42,6 +46,7 @@ export const products = [
     nombre: "Boing Mango",
     descripcion: "Botella - 355 ml",
     precio: 35,
+    stock: 5,
     imagen: "https://res.cloudinary.com/dzzfmny6q/image/upload/v1678568351/boing_mango_sxytxl.webp",
   },
   {
@@ -51,6 +56,7 @@ export const products = [
     nombre: "Sidral Mundet",
     descripcion: "Lata - 355 ml",
     precio: 35,
+    stock: 5,
     imagen: "https://res.cloudinary.com/dzzfmny6q/image/upload/v1678568351/sidral_mundet_jydcpt.webp",
   },
   {
@@ -60,6 +66,7 @@ export const products = [
     nombre: "Agua Mineral Peñafiel",
     descripcion: "Lata - 355 ml",
     precio: 30,
+    stock: 5,
     imagen: "https://res.cloudinary.com/dzzfmny6q/image/upload/v1678568351/agua_mineral_pe%C3%B1afiel_u9kzex.webp",
   },
   {
@@ -69,6 +76,7 @@ export const products = [
     nombre: "Poblanito",
     descripcion: "",
     precio: 125,
+    stock: 5,
     imagen: "https://res.cloudinary.com/dzzfmny6q/image/upload/v1678568387/poblanito_hcvwa3.webp",
   },
   {
@@ -78,6 +86,7 @@ export const products = [
     nombre: "Beso de Sabina",
     descripcion: "",
     precio: 145,
+    stock: 5,
     imagen: "https://res.cloudinary.com/dzzfmny6q/image/upload/v1678568387/beso_de_sabina_ytpqup.webp",
   },
   {
@@ -87,6 +96,7 @@ export const products = [
     nombre: "Mojito",
     descripcion: "",
     precio: 100,
+    stock: 5,
     imagen: "https://res.cloudinary.com/dzzfmny6q/image/upload/v1678568387/mojito_eyhkwg.webp",
   },
   {
@@ -96,6 +106,7 @@ export const products = [
     nombre: "Carajillo",
     descripcion: "",
     precio: 100,
+    stock: 5,
     imagen: "https://res.cloudinary.com/dzzfmny6q/image/upload/v1678568388/carajillo_oafkh9.webp",
   },
   {
@@ -105,6 +116,7 @@ export const products = [
     nombre: "Gin Tónico",
     descripcion: "",
     precio: 165,
+    stock: 5,
     imagen: "https://res.cloudinary.com/dzzfmny6q/image/upload/v1678568387/gin_tonico_nhbyqm.webp",
   },
   {
@@ -114,6 +126,7 @@ export const products = [
     nombre: "Heineken",
     descripcion: "355 ml",
     precio: 65,
+    stock: 5,
     imagen: "https://res.cloudinary.com/dzzfmny6q/image/upload/v1678568419/heineken_v44siz.webp",
   },
   {
@@ -123,6 +136,7 @@ export const products = [
     nombre: "Bohemia Pilsner",
     descripcion: "355 ml",
     precio: 55,
+    stock: 5,
     imagen: "https://res.cloudinary.com/dzzfmny6q/image/upload/v1678568419/bohemia_pilsner_tlztte.webp",
   },
   {
@@ -132,6 +146,7 @@ export const products = [
     nombre: "Nochebuena",
     descripcion: "355 ml",
     precio: 60,
+    stock: 5,
     imagen: "https://res.cloudinary.com/dzzfmny6q/image/upload/v1678568419/nochebuena_ns42gg.webp",
   },
   {
@@ -141,6 +156,7 @@ export const products = [
     nombre: "Ticus Porter",
     descripcion: "355 ml",
     precio: 140,
+    stock: 5,
     imagen: "https://res.cloudinary.com/dzzfmny6q/image/upload/v1678568419/Ticus_Porter_i6tor5.webp",
   },
   {
@@ -150,6 +166,7 @@ export const products = [
     nombre: "Ron Bacardi Blanco",
     descripcion: "Copa 2 oz",
     precio: 50,
+    stock: 5,
     imagen: "https://res.cloudinary.com/dzzfmny6q/image/upload/v1678568442/bacardi_blanco_d5zqaa.webp"
   },
   {
@@ -159,6 +176,7 @@ export const products = [
     nombre: "Ron Abuelo",
     descripcion: "Copa 2 oz",
     precio: 60,
+    stock: 5,
     imagen: "https://res.cloudinary.com/dzzfmny6q/image/upload/v1678568442/abuelo_sa3ygx.webp",
   },
   {
@@ -168,6 +186,7 @@ export const products = [
     nombre: "Whiskey Jack Daniel's 7",
     descripcion: "Copa 2 oz",
     precio: 125,
+    stock: 5,
     imagen: "https://res.cloudinary.com/dzzfmny6q/image/upload/v1678568442/jack_daniels_7_b9y7sy.webp",
   },
   {
@@ -177,6 +196,7 @@ export const products = [
     nombre: "Mezcal 400 conejos",
     descripcion: "Copa 2 oz",
     precio: 160,
+    stock: 5,
     imagen: "https://res.cloudinary.com/dzzfmny6q/image/upload/v1678568463/400_conejos_lva7o3.webp",
   },
   {
@@ -186,6 +206,7 @@ export const products = [
     nombre: "Gin Bombay Sapphire",
     descripcion: "Copa 2 oz",
     precio: 140,
+    stock: 5,
     imagen: "https://res.cloudinary.com/dzzfmny6q/image/upload/v1678568463/bombay_sapphire_pa5gia.webp",
   },
   {
@@ -195,6 +216,7 @@ export const products = [
     nombre: "Tequila 1800 Reposado",
     descripcion: "Copa 2 oz",
     precio: 150,
+    stock: 5,
     imagen: "https://res.cloudinary.com/dzzfmny6q/image/upload/v1678568463/1800_reposado_jma82n.webp",
   },
   {
@@ -205,6 +227,7 @@ export const products = [
     descripcion:
       "Mezcla de nuestras tres principales carnes ahumadas (Pork Ribs, Brisket y Pulled Pork) acompañadas de tres Texas Toast",
     precio: 415,
+    stock: 5,
     imagen: "https://res.cloudinary.com/dzzfmny6q/image/upload/v1678568495/BBQ_Sampler_ltwuy1.webp",
   },
   {
@@ -215,6 +238,7 @@ export const products = [
     descripcion:
       "Pecho de res ahumado y endulzado con nuestra Smokes BBQ Sauce. Incluye un Texas Toast",
     precio: 235,
+    stock: 5,
     imagen: "https://res.cloudinary.com/dzzfmny6q/image/upload/v1678568497/Brisket_w3fmfb.webp",
   },
   {
@@ -225,6 +249,7 @@ export const products = [
     descripcion:
       "Espaldilla de cerdo ahumada y bañada en nuestra Smokes BBQ Sauce. Incluye un Texas Toast.",
     precio: 195,
+    stock: 5,
     imagen: "https://res.cloudinary.com/dzzfmny6q/image/upload/v1678568495/Pulled_Pork_grugcu.webp",
   },
   {
@@ -235,6 +260,7 @@ export const products = [
     descripcion:
       "Costillas de hombro de cerdo ahumadas y bañadas en Smokes BBQ Sauce. Incluye un Texas Toast.",
     precio: 270,
+    stock: 5,
     imagen: "https://res.cloudinary.com/dzzfmny6q/image/upload/v1678568495/Fat_Bastard_Ribs_brchuw.webp",
   },
   {
@@ -245,6 +271,7 @@ export const products = [
     descripcion:
       "Pierna de pavo con doble ahumado, servida con salsa de arándano y cereza. Incluye un Texas Toast.",
     precio: 490,
+    stock: 5,
     imagen: "https://res.cloudinary.com/dzzfmny6q/image/upload/v1678568497/Turkey_Leg_hzun82.webp",
   },
   {
@@ -255,6 +282,7 @@ export const products = [
     descripcion:
       "Sandwich de pecho de res ahumado y caramelizado con Smokes BBQ Sauce dentro de un bollo americano",
     precio: 180,
+    stock: 5,
     imagen: "https://res.cloudinary.com/dzzfmny6q/image/upload/v1678568521/Brisket_Sandwich_txs9vd.webp",
   },
   {
@@ -265,6 +293,7 @@ export const products = [
     descripcion:
       "Sandiwch de espaldilla de cerdo ahumada y bañada en Smokes BBQ Sauce dentro de un bollo americano",
     precio: 155,
+    stock: 5,
     imagen: "https://res.cloudinary.com/dzzfmny6q/image/upload/v1678568522/Pulled_Pork_Sandwich_miyab7.webp",
   },
   {
@@ -275,6 +304,7 @@ export const products = [
     descripcion:
       "Sandwich de costilla de cerdo ahumada y bañada con Smokes BBQ Sauce, chicharrón de queso gouda, cebolla caramelizada, Mayo Chipotle y chile jalapeño a la sal dentro de Pan Pretzel",
     precio: 245,
+    stock: 5,
     imagen: "https://res.cloudinary.com/dzzfmny6q/image/upload/v1678568522/Rib_Sandwich_wuagod.webp",
   },
   {
@@ -285,6 +315,7 @@ export const products = [
     descripcion:
       "Unión de Jalapeño Poppers, Cheese Sticks, Mac & Tocino y Onion Rings.",
     precio: 450,
+    stock: 5,
     imagen: "https://res.cloudinary.com/dzzfmny6q/image/upload/v1678568548/MVP_Fried_Sampler_scpiap.webp",
   },
   {
@@ -295,6 +326,7 @@ export const products = [
     descripcion:
       "Jalapeños toreados con salsa gruesa y acompañados de limón verde",
     precio: 60,
+    stock: 5,
     imagen: "https://res.cloudinary.com/dzzfmny6q/image/upload/v1678568548/Jalapenos_Sal_hpszmn.webp",
   },
   {
@@ -305,6 +337,7 @@ export const products = [
     descripcion:
       "Pan francés con tocino, maple, mantequilla y un toque de leche condensada",
     precio: 100,
+    stock: 5,
     imagen: "https://res.cloudinary.com/dzzfmny6q/image/upload/v1678568563/French_Toast_uwk7tj.webp",
   },
 ];

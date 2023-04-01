@@ -1,4 +1,3 @@
-import React from "react";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
@@ -10,7 +9,7 @@ import { Link } from "react-router-dom";
 
 const ItemRender = ({ item }) => {
   return (
-    <Card sx={{ width: 400, height: 400 }}>
+    <Card sx={{ width: 400, height: "auto" }}>
       <CardMedia
         sx={{ height: 180 }}
         image={item.imagen}
@@ -35,9 +34,6 @@ const ItemRender = ({ item }) => {
             Detalle
           </Button>
         </Link>
-        <Button size="small" variant="contained">
-          Agregar al carrito
-        </Button>
       </CardActions>
     </Card>
   );

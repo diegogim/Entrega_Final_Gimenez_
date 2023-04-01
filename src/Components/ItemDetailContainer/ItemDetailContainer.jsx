@@ -1,17 +1,29 @@
 import { products } from "../../mockProducts";
 import { useParams } from "react-router-dom";
+import ItemDetail from "../ItemDetail/ItemDetail";
+import { useContext } from "react";
+import { CartContext } from "../../Context/CartContext";
 
 const ItemDetailContainer = () => {
   const { id } = useParams();
 
+  const { addToCart, getQuantity } = useContext(CartContext);
+
   const prodSel = products.find((x) => x.id === parseInt(id));
+
+  let qty = getQuantity(Number(id));
+
+  const onAdd = (qty) => {
+    let product = {
+      ...prodSel,
+      quantity: qty,
+    };
+    addToCart(product);
+  };
 
   return (
     <div>
-      <h1>{prodSel.nombre}</h1>
-      <h3>{prodSel.descripcion}</h3>
-      <h3>${prodSel.precio}</h3>
-      <img src={prodSel.imagen} alt="" style={{height: 400, width: 400}}/>
+      <ItemDetail prodSel={prodSel} onAdd={onAdd} qty={qty} />
     </div>
   );
 };
