@@ -15,7 +15,7 @@ import CheckoutForm from "../CheckoutForm/CheckoutForm";
 
 const Checkout = ({ totalPrice }) => {
   const { cart, deleteProduct, emptyCart } = useContext(CartContext);
-  const [finCompra, setFinCompra] = useState(true);
+  const [finCompra, setFinCompra] = useState(false);
 
   return (
     <div>

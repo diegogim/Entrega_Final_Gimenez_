@@ -14,6 +14,8 @@ const CheckoutForm = () => {
     console.log(userData);
   };
 
+  const [verif, setVerif] = useState(false);
+
   return (
     <div>
       <h1>Ingresa tus datos</h1>
@@ -50,9 +52,21 @@ const CheckoutForm = () => {
           value={userData.email}
           onChange={(e) => setUserData({ ...userData, email: e.target.value })}
         />
-        <Button variant="contained" type="submit">
-          Comprar
-        </Button>
+        <TextField
+          id="verifEmail"
+          label="Verifica tu email"
+          variant="outlined"
+          onChange={(e) => e.target.value === userData.email ? setVerif(true) : setVerif(false)}
+        />
+        {!verif ? (
+          <Button variant="contained" type="submit" disabled>
+            Comprar
+          </Button>
+        ) : (
+          <Button variant="contained" type="submit">
+            Comprar
+          </Button>
+        )}
       </form>
     </div>
   );

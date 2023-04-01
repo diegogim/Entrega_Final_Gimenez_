@@ -10,7 +10,7 @@ const CartWidget = () => {
   const total = getTotalQuantity();
 
   return (
-    <Link to="/checkout" style={{ textDecoration: "none" }}>
+    <Link to="/cart" style={{ textDecoration: "none" }}>
       <Badge badgeContent={total} color="warning">
         <RiShoppingCartLine color="white" size={40} />
       </Badge>
