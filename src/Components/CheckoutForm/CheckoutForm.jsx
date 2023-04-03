@@ -1,7 +1,11 @@
 import { Button, TextField } from "@mui/material";
-import { useState } from "react";
+import { addDoc, collection, doc, updateDoc } from "firebase/firestore";
+import { useContext, useState } from "react";
+import { CartContext } from "../../Context/CartContext";
+import { db } from "../../firebaseConfig";
 
-const CheckoutForm = () => {
+const CheckoutForm = ({ totalPrice, setOrderId }) => {
+  const { cart, setCart } = useContext(CartContext);
   const [userData, setUserData] = useState({
     nombre: "",
     apellido: "",
@@ -11,7 +15,22 @@ const CheckoutForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(userData);
+
+    let orden = {
+      buyer: userData,
+      items: cart,
+      total: totalPrice,
+    };
+    let orderCollection = collection(db, "ordenes");
+    addDoc(orderCollection, orden).then((res) => {
+      setOrderId(res.id);
+      setCart([]);
+    });
+
+    cart.map((e) => {
+      let refDoc = doc(db, "productos", e.id);
+      updateDoc(refDoc, { stock: e.stock - e.quantity });
+    });
   };
 
   const [verif, setVerif] = useState(false);
@@ -56,7 +75,9 @@ const CheckoutForm = () => {
           id="verifEmail"
           label="Verifica tu email"
           variant="outlined"
-          onChange={(e) => e.target.value === userData.email ? setVerif(true) : setVerif(false)}
+          onChange={(e) =>
+            e.target.value === userData.email ? setVerif(true) : setVerif(false)
+          }
         />
         {!verif ? (
           <Button variant="contained" type="submit" disabled>

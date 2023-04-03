@@ -10,15 +10,20 @@ const Navbar = ({ children }) => {
   const [catList, setCatList] = useState([]);
 
   useEffect(() => {
-    const itemsCollection = collection(db, "productos");
+    const itemsCollection = collection(db, "categorias");
     getDocs(itemsCollection).then((res) => {
-      let productos = res.docs.map((e) => {
+      let categorias = res.docs.map((e) => {
         return {
           ...e.data(),
           id: e.id,
         };
       });
-      setCatList(productos);
+      setCatList(categorias);
+      const firstCat = catList.length > 0 && catList.find(e => e.title === "Todas")
+      const otherCat = catList.length > 0 &&  catList.filter(e => e.title !== "Todas")
+      if(catList.length > 0){
+        setCatList([firstCat, ...otherCat])
+      }
     });
   }, []);
 
@@ -31,6 +36,20 @@ const Navbar = ({ children }) => {
           className={styles.logo}
         />
       </Link>
+
+      <ul className={styles.lista}>
+          {catList?.map((e) => {
+            return (
+              <Link
+                key={e.id}
+                to={e.path}
+                className={styles.links}
+              >
+                {e.tipo}
+              </Link>
+            );
+          })}
+        </ul>
 
       <CartWidget />
     </div>

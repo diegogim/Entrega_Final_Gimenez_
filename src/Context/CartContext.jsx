@@ -102,6 +102,7 @@ const CartContextProvider = ({ children }) => {
     getQuantity,
     getTotalPrice,
     deleteProduct,
+    setCart
   };
 
   return <CartContext.Provider value={data}>{children}</CartContext.Provider>;

@@ -3,7 +3,7 @@ import styles from "./ItemListContainer.module.css";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { db } from "../../firebaseConfig";
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs, query, where } from "firebase/firestore";
 
 const ItemListContainer = () => {
   const { categoria } = useParams();
@@ -12,7 +12,17 @@ const ItemListContainer = () => {
 
   useEffect(() => {
     const itemsCollection = collection(db, "productos");
-    getDocs(itemsCollection).then((res) => {
+
+    let usedDb = undefined;
+
+    if (categoria) {
+      const q = query(itemsCollection, where("categoria", "==", categoria));
+      usedDb = getDocs(q);
+    } else {
+      usedDb = getDocs(itemsCollection);
+    }
+
+    usedDb.then((res) => {
       let productos = res.docs.map((e) => {
         return {
           ...e.data(),
@@ -21,13 +31,7 @@ const ItemListContainer = () => {
       });
       setProdList(productos);
     });
-  }, []);
-
-  const prodFiltered = prodList.filter((x) => x.categoria === categoria);
-
-  useEffect(() => {
-    categoria ? setProdList(prodFiltered) : setProdList(prodList);
-  }, [categoria, prodFiltered]);
+  }, [categoria]);
 
   return (
     <div className={styles.greet}>
