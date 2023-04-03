@@ -9,6 +9,11 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import { Button } from "@mui/material";
+import Box from "@mui/material/Box";
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import Typography from "@mui/material/Typography";
 
 import { BsTrash } from "react-icons/bs";
 import CheckoutForm from "../CheckoutForm/CheckoutForm";
@@ -85,18 +90,71 @@ const Checkout = ({ totalPrice }) => {
               </div>
             </div>
           ) : (
-            <div>
-              <h2>No hay nada</h2>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                height: "90vh",
+              }}
+            >
+              <Card sx={{ maxWidth: 275 }}>
+                <CardContent>
+                  <Typography
+                    variant="h5"
+                    component="div"
+                    sx={{ marginBottom: 5 }}
+                  >
+                    Aún no has agregado nada a tu carrito
+                  </Typography>
+                  <Typography variant="body2">
+                    Da click abajo para comprar
+                  </Typography>
+                </CardContent>
+                <CardActions>
+                  <Link to="/">
+                    <Button size="small" variant="contained">
+                      Ir a la tienda
+                    </Button>
+                  </Link>
+                </CardActions>
+              </Card>
             </div>
           )
         ) : (
           <CheckoutForm totalPrice={totalPrice} setOrderId={setOrderId} />
         )
       ) : (
-        <div>
-          <h2>Aquí está tu comprobante:</h2>
-          <h3>{orderId}</h3>
-          <Link to="/">Seguir comprando</Link>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            height: "90vh",
+          }}
+        >
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              margin: 10,
+            }}
+          >
+            <Card sx={{ minWidth: 275 }}>
+              <CardContent>
+                <Typography variant="h5" component="div">
+                  Aquí está tu comprobante:
+                </Typography>
+                <Typography variant="h2">{orderId}</Typography>
+              </CardContent>
+              <CardActions>
+                <Link to="/">
+                  <Button size="small">Seguir comprando</Button>
+                </Link>
+              </CardActions>
+            </Card>
+          </div>
         </div>
       )}
     </div>

@@ -3,6 +3,7 @@ import { addDoc, collection, doc, updateDoc } from "firebase/firestore";
 import { useContext, useState } from "react";
 import { CartContext } from "../../Context/CartContext";
 import { db } from "../../firebaseConfig";
+import { BeatLoader } from "react-spinners";
 
 const CheckoutForm = ({ totalPrice, setOrderId }) => {
   const { cart, setCart } = useContext(CartContext);
